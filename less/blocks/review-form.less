@@ -1,0 +1,95 @@
+/*Особенности*/
+
+.review-form {
+  margin-top: 15px;
+}
+
+.review-form__section {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  border-top: @border;
+}
+
+.review-form__submit {
+  margin-top: 21px;
+  padding-bottom: 11px;
+}
+
+.review-form__button--disable {
+  .button-disable;
+}
+
+.review-form__button {
+  width: 280px;
+  height: 58px;
+  padding: 0;
+  margin: 0 auto;
+  .button-style;
+}
+
+.review-form__button:hover {
+  .button-hover;
+}
+
+.review-form__button:active {
+  .button-active;
+}
+
+.review-form__required {
+  font-size: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .review-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 60px;
+    margin-top: 0;
+  }
+
+  .review-form__section {
+    padding: 0;
+    border-top: none;
+  }
+
+  .review-form__section:nth-of-type(3) {
+    order: -1;
+  }
+
+  .review-form__submit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 648px;
+    margin-top: 25px;
+    padding-bottom: 60px;
+  }
+
+  .review-form__button {
+    width: 324px;
+    margin: 0;
+  }
+
+  .review-form__required {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .review-form {
+    margin-top: -15px;
+    padding: 0 120px;
+  }
+
+  .review-form__submit {
+    width: 960px;
+    margin-top: 24px;
+    padding-bottom: 66px;
+  }
+
+  .review-form__button {
+    width: 480px;
+  }
+}

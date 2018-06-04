@@ -1,0 +1,78 @@
+/*Посты в фотоальбоме*/
+
+.album-post {
+  padding-top: 22px;
+  padding-bottom: 17px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-top: @border;
+}
+
+.album-post:last-of-type {
+  border-bottom: @border;
+}
+
+.album-post__photo {
+  width: 280px;
+  height: 280px;
+  margin: auto;
+}
+
+@media (min-width: @tablet-width) {
+  .album-post {
+    padding: 0;
+    border-top: none;
+  }
+
+  .album-post:last-of-type {
+    border-bottom: none;
+  }
+
+  .album-post__photo--main {
+    width: 648px;
+    height: 400px;
+    background-color: chocolate;
+  }
+
+  .album-post__photo--other {
+    width: 324px;
+    height: 267px;
+    background-color: burlywood;
+  }
+
+  .album-post__photo--main img {
+    width: 648px;
+    height: 400px;
+  }
+
+  .album-post__photo--other img {
+    width: 324px;
+    height: 267px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .album {
+    padding: 0;
+  }
+
+  .album-post {
+    position: relative;
+  }
+
+  .album-post__photo--main {
+    width: 1200px;
+  }
+
+  .album-post__photo--other {
+    width: 400px;
+  }
+
+  .album-post__photo--main img {
+    width: 1200px;
+  }
+
+  .album-post__photo--other img {
+    width: 400px;
+  }
+}

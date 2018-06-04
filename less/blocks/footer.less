@@ -1,0 +1,148 @@
+/*Подвал*/
+/*Общие настройки*/
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 320px;
+  margin: 0 auto;
+  padding: 20px 0;
+  background-color: @white;
+}
+
+/*Хештег*/
+
+.footer__hashtag-text {
+  margin: 16px;
+  .text-big-title;
+}
+
+/*Ссылки на соцсети*/
+
+.footer__social {
+  margin: 20px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__social-link {
+  width: 46px;
+  height: 48px;
+  margin-right: 6px;
+  background-color: @main-blue;
+
+  &:nth-of-type(3) {
+    margin-right: 0;
+  }
+}
+
+.footer__twitter,
+.footer__youtube {
+  margin-top: 17px;
+  fill: @white;
+}
+
+.footer__facebook {
+  margin-top: 14px;
+  fill: @white;
+}
+
+.footer__social-link:hover {
+  background-color: @middle-blue;
+}
+
+.footer__social-link:active {
+  background-color: @dark-blue;
+
+  .footer__twitter,
+  .footer__facebook,
+  .footer__youtube {
+    fill: #88b6d1;
+  }
+}
+
+/*Копирайт*/
+
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.footer__copyright span {
+  .text-label;
+  margin-bottom: 10px;
+}
+
+.footer__logotype-icon {
+  width: 27px;
+  height: 34px;
+  margin-left: 10px;
+  fill: @black;
+}
+
+.footer__logotype-icon:hover {
+  fill: @main-blue;
+}
+
+.footer__logotype-icon:active {
+  fill: @middle-grey;
+}
+
+@media (min-width: @tablet-width) {
+  .footer {
+    flex-direction: row;
+    width: 768px;
+    padding-top: 31px;
+    padding-bottom: 30px;
+  }
+
+  .footer__hashtag {
+    width: 256px;
+  }
+
+  .footer__social {
+    flex-direction: row;
+    justify-content: center;
+    width: 256px;
+    margin: 0;
+    padding-bottom: 0;
+  }
+
+  .footer__copyright {
+    width: 256px;
+    text-align: right;
+  }
+
+  .footer__copyright span {
+    margin-right: 16px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .footer {
+    width: 1200px;
+  }
+
+  .footer__hashtag {
+    width: 400px;
+  }
+
+  .footer__social {
+    width: 400px;
+  }
+
+  .footer__copyright {
+    width: 400px;
+    justify-content: flex-end;
+  }
+
+  .footer__logotype-icon {
+    margin-right: 44px;
+  }
+}

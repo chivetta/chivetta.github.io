@@ -1,0 +1,107 @@
+/*ФИО*/
+
+.fullname {
+  padding-bottom: 5px;
+}
+
+.fullname__item {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.fullname__title {
+  margin-top: 18px;
+  margin-bottom: 21px;
+  .text-title;
+}
+
+.fullname__label {
+  padding-right: 14px;
+}
+
+.fullname__input {
+  height: 20px;
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-bottom: 14px;
+  color: @black;
+  background-color: @light-grey;
+  border: 4px solid @light-grey;
+  outline: none;
+  .text-title;
+  .placeholder;
+
+  &:hover {
+    background-color: @grey;
+    border-color: @grey;
+  }
+
+  &:active,
+  &:focus {
+    background-color: @white;
+  }
+}
+
+.fullname__input--name {
+  width: 206px;
+}
+
+.fullname__input--surname {
+  width: 169px;
+}
+
+.fullname__input--patronymic {
+  margin-left: 4px;
+  width: 169px;
+}
+
+@media (min-width: @tablet-width) {
+  .fullname {
+    position: relative;
+    width: 266px;
+    padding-left: 58px;
+    text-align: left;
+  }
+
+  .fullname::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: -1px;
+    top: 20px;
+    width: 1px;
+    height: 292px;
+    background-color: #dbdbdb;
+  }
+
+  .fullname__title {
+    margin-bottom: 57px;
+    font-size: 21px;
+  }
+
+  .fullname__input--name {
+    width: 191px;
+  }
+
+  .fullname__input--surname,
+  .fullname__input--patronymic {
+    width: 154px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fullname {
+    width: 400px;
+    padding-left: 80px;
+  }
+
+  .fullname__input--name {
+    width: 325px;
+  }
+
+  .fullname__input--surname,
+  .fullname__input--patronymic {
+    width: 288px;
+  }
+}

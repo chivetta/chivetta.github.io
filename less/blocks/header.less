@@ -1,0 +1,118 @@
+/*Шапка*/
+
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
+  z-index: 5;
+}
+
+.header__logotype {
+  height: 56px;
+  background-color: @white;
+}
+
+.header__link {
+  height: 83px;
+  background-color: transparent;
+}
+
+.header__logotype-picture {
+  width: 102px;
+  height: 83px;
+}
+
+/*Нивигация*/
+
+.header__nav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
+}
+
+/*кнопка открытия-закрытия меню*/
+
+.header__nav-toggle {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 56px;
+  height: 56px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 23px 23px;
+  border: none;
+
+  &--closed {
+    bottom: -56px;
+    right: 5px;
+  }
+
+  &--opened {
+    top: 0;
+    right: 5px;
+  }
+}
+
+/*.header__nav-button {
+  &--closed {
+    display: block;
+    transform: translateX(50%);
+    fill: #81b3d2;
+  }
+
+  &--opened {
+    display: none;
+  }
+} /*закрытое меню*/
+
+.header__nav-button {
+  &--closed {
+    display: none;
+  }
+
+  &--opened {
+    display: block;
+    transform: translateX(50%);
+    fill: #ffffff;
+  }
+} /*открытое меню*/
+
+@media (min-width: @tablet-width) {
+  .header {
+    width: 768px;
+    height: 56px;
+    background-color: @white;
+  }
+
+  .header__link {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .header__nav {
+    width: auto;
+    margin: 0;
+  }
+
+  .header__nav-toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header {
+    width: 1200px;
+  }
+
+  .header__logotype-picture {
+    width: 188px;
+    height: 96px;
+  }
+}

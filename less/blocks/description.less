@@ -1,0 +1,83 @@
+/*Описание фотографий в фотоальбоме*/
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 15px;
+}
+
+.description__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: bold;
+  .text-description;
+}
+
+.description__author {
+  margin-top: 0;
+  margin-bottom: 5px;
+  text-transform: none;
+  .text-description;
+}
+
+.description__like {
+  font-weight: bold;
+  .text-description;
+}
+
+.description__icon {
+  height: 24px;
+  vertical-align: text-bottom;
+  padding-right: 10px;
+  fill: @middle-grey;
+}
+
+@media (min-width: @tablet-width) {
+  .description {
+    flex-wrap: wrap;
+    height: 60px;
+    margin-top: 0;
+    padding: 10px 0;
+    background-color: @light-grey;
+  }
+
+  .description__title,
+  .description__author {
+    margin-left: 20px;
+    margin-bottom: 0;
+  }
+
+  .description__like {
+    align-self: flex-end;
+    width: 85px;
+    text-align: left;
+  }
+
+  .description__icon {
+    padding-right: 7px;
+    fill: #a9a9a9;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: @transparent-black;
+  }
+
+  .description__title,
+  .description__author,
+  .description__like {
+    color: @white;
+    margin-top: -1px;
+  }
+
+  .description__icon {
+    fill: @white;
+  }
+}

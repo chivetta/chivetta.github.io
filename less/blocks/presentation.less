@@ -1,0 +1,230 @@
+/*Видеопрезентация*/
+
+.presentation {
+  padding: 20px 0;
+}
+
+/*Описание презентации*/
+
+.presentation__description {
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.presentation__title {
+  margin-top: 12px;
+  margin-bottom: 28px;
+  .text-title;
+}
+
+.presentation__text {
+  padding: 0 10px;
+  .text-description;
+}
+
+/*Видео*/
+
+.presentation__video {
+  position: relative;
+  width: 320px;
+  height: 201px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 85px;
+  background-color: @middle-grey;
+  background-image: url("../img/video-mobile@1x.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/video-mobile@2x.jpg");
+  }
+}
+
+/*Контроллеры*/
+
+.presentation__controls {
+  position: absolute;
+  left: 50%;
+  bottom: -66px;
+  transform: translateX(-50%);
+  width: 280px;
+  height: 111px;
+  background-color: @transparent-black;
+}
+
+.presentation__duration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+}
+
+.presentation__line {
+  position: relative;
+  display: block;
+  width: 236px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.presentation__line::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 37px;
+  width: 9px;
+  height: 9px;
+  background-color: @white;
+  border-radius: 50%;
+}
+
+.presentation__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 66px;
+  background-color: @light-grey;
+}
+
+.presentation__button {
+  height: 20px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.presentation__button:first-of-type {
+  margin-left: 25px;
+  margin-right: 133px;
+}
+
+.presentation__button:last-of-type {
+  margin-left: 31px;
+  margin-right: 23px;
+}
+
+.presentation__replay,
+.presentation__subtitles,
+.presentation__fullscreen {
+  fill: #5c6870;
+}
+
+.presentation__replay:hover,
+.presentation__subtitles:hover,
+.presentation__fullscreen:hover {
+  fill: @dark-grey;
+}
+
+.presentation__replay:active,
+.presentation__subtitles:active,
+.presentation__fullscreen:active {
+  fill: #c1c1c1;
+}
+
+@media (min-width: @tablet-width) {
+  .presentation__description {
+    padding-top: 35px;
+    padding-bottom: 54px;
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+
+  .presentation__title {
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+
+  .presentation__video {
+    width: 648px;
+    height: 500px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    background-image: url("../img/video-tablet@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/video-tablet@2x.jpg");
+    }
+  }
+
+  .presentation__controls {
+    width: 100%;
+    height: 92px;
+    bottom: 0;
+  }
+
+  .presentation__duration {
+    justify-content: flex-start;
+    height: 100%;
+    padding-left: 93px;
+  }
+
+  .presentation__line {
+    width: 390px;
+  }
+
+  .presentation__line::after {
+    left: 113px;
+  }
+
+  .presentation__buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+  }
+
+  .presentation__button:first-of-type {
+    margin-left: 35px;
+    margin-right: 473px;
+  }
+
+  .presentation__button:last-of-type {
+    margin-right: 42px;
+  }
+
+  .presentation__replay,
+  .presentation__subtitles,
+  .presentation__fullscreen {
+    fill: @white;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .presentation__description {
+    padding-top: 40px;
+    padding-left: 360px;
+    padding-right: 360px;
+  }
+
+  .presentation__text {
+    padding: 0 30px;
+  }
+
+  .presentation__video {
+    width: 800px;
+    height: 500px;
+    margin-top: 2px;
+    margin-bottom: 66px;
+    background-image: url("../img/video-desktop@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/video-desktop@2x.jpg");
+    }
+  }
+
+  .presentation__line {
+    width: 540px;
+  }
+
+
+  .presentation__button:first-of-type {
+    margin-right: 624px;
+  }
+}
